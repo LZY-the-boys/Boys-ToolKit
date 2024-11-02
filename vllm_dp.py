@@ -277,7 +277,6 @@ def run_dp(args):
 
     all_data = ray.get(splited_outs)
     all_data = [a for aa in all_data for a in aa]
-    import pdb;pdb.set_trace()
     postprocess(args.outpath, [a[0] for a in all_data], [a[1] for a in all_data])
 
 
